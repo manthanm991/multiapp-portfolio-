@@ -13,5 +13,8 @@
   "keywords": [],
   "author": "Manthan Makode",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.2.0"
+  }
 }

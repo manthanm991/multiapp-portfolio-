@@ -1,0 +1,123 @@
+/* Layout.css */
+@import url('./global.css');
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Desktop: Account for sidebar width */
+@media (min-width: 992px) {
+  .main-content {
+    margin-left: 60px; /* Default collapsed sidebar width */
+  }
+  
+  /* When sidebar is expanded (either by click or hover) */
+  .sidebar-expanded ~ .main-content,
+  .sidebar:hover ~ .main-content {
+    margin-left: 280px;
+  }
+}
+
+/* Mobile: Full width */
+@media (max-width: 991px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+.content-wrapper {
+  flex: 1;
+  padding: 20px;
+  background: var(--bg-light);
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Mobile padding adjustment for toggle button */
+@media (max-width: 991px) {
+  .content-wrapper {
+    padding-top: 70px; /* Account for mobile toggle button */
+  }
+}
+
+/* Ensure content is scrollable */
+.content-wrapper {
+  overflow-y: auto;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .content-wrapper {
+    padding: 15px;
+    padding-top: 60px;
+  }
+}
+
+/* Smooth transitions for all content */
+.content-wrapper * {
+  transition: all 0.3s ease;
+}
+
+/* Prevent content from jumping during sidebar transitions */
+.app-layout {
+  overflow-x: hidden;
+}
+
+/* Additional styling for better UX */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Page headers */
+.content-wrapper h1,
+.content-wrapper h2,
+.content-wrapper h3 {
+  margin-bottom: 1rem;
+  color: var(--text-dark);
+}
+
+/* Card-like content areas */
+.content-wrapper .card {
+  background: var(--bg-white);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--shadow-light);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.3s ease;
+}
+
+.content-wrapper .card:hover {
+  box-shadow: 0 4px 8px var(--shadow-medium);
+}
+
+/* Responsive grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .content-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

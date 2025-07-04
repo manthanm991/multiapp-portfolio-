@@ -1,0 +1,43 @@
+:root {
+  --primary-bg: #343a40;
+  --primary-bg-hover: #495057;
+  --primary-bg-active: #007bff;
+  --primary-accent: #17a2b8;
+  
+  --text-primary: #ffffff;
+  --text-secondary: #adb5bd;
+  --text-dark: #343a40;
+  --text-muted: #6c757d;
+  
+  --bg-light: #f8f9fa;
+  --bg-white: #ffffff;
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+  
+  --border-color: #495057;
+  --border-light: #dee2e6;
+  
+  --btn-danger: #dc3545;
+  --btn-danger-hover: #c82333;
+  --btn-primary: #007bff;
+  --btn-primary-hover: #0056b3;
+  --btn-success: #28a745;
+  
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+  --shadow-dark: rgba(0, 0, 0, 0.2);
+  
+  --scrollbar-track: #343a40;
+  --scrollbar-thumb: #495057;
+  --scrollbar-thumb-hover: #6c757d;
+  
+  --toggle-bg: #343a40;
+  --toggle-bg-hover: #495057;
+  --toggle-bg-active: #007bff;
+  --toggle-text: #ffffff;
+
+  --sidebar-bg-default: #343a40;
+  --sidebar-bg-open: #1a1d23;
+  --sidebar-bg-open-gradient: linear-gradient(135deg, #292c2f 0%, #3b4045 100%);
+
+  --google-btn-bg-color: #4285F4;
+}
