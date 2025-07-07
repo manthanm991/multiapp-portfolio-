@@ -1,0 +1,30 @@
+@import url('../global.css');
+
+.app-layout {
+  overflow-x: hidden;
+}
+
+.main-content {
+  transition: margin-left 0.3s ease;
+  width: 100%;
+}
+
+.content-wrapper {
+  background: var(--black-700);
+  transition: margin-left 0.3s ease;
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .main-content {
+    margin-left: 60px;
+  }
+  
+  .sidebar-expanded ~ .main-content {
+    margin-left: 280px;
+  }
+  
+  .content-wrapper {
+    padding: 2rem 1.5rem;
+  }
+}
