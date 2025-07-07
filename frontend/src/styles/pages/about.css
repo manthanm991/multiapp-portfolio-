@@ -1,0 +1,130 @@
+@import url("../global.css");
+@import url("./common.css");
+
+:root {
+  --about-text-primary: var(--black-900);
+  --about-text-secondary: var(--black-700);
+}
+
+.about-content {
+  padding: 4rem 0 0 0;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+  padding-left: 40px;
+}
+
+.about-text h2 {
+  color: var(--white);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.about-text .lead {
+  font-size: 1.3rem;
+  color: var(--gray-300);
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.about-text p,
+.interest-item p {
+  line-height: 1.7;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.about-text p {
+  color: var(--white);
+}
+
+.interest-item p {
+  color: var(--about-text-secondary);
+}
+
+.about-text-highlight {
+  color: var(--primary-color);
+}
+
+.skills-section,
+.interests-section {
+  background: var(--about-text-primary);
+  padding: 2rem;
+  border-radius: 20px;
+  margin: 2rem 0;
+}
+
+.skills-section h3,
+.interests-section h3,
+.skill-list,
+.skill-item {
+  margin-bottom: 1.5rem;
+}
+
+.skill-name {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.skill-bar {
+  height: 10px;
+  background-color: var(--text-secondary);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--common-primary) 0%,
+    var(--common-secondary) 100%
+  );
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+.interest-item {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: var(--common-background);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+
+.interest-item:hover {
+  transform: translateY(-5px);
+}
+
+.interest-item i {
+  font-size: 3rem;
+  color: var(--common-primary);
+  margin-bottom: 20px;
+}
+
+.interest-item h5 {
+  color: var(--about-text-primary);
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .about-text {
+    padding-left: 0;
+    margin-top: 40px;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+}

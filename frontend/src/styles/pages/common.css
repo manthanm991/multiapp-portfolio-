@@ -1,0 +1,284 @@
+@import url('../global.css');
+
+:root {
+  --common-primary: #667eea;
+  --common-secondary: #764ba2;
+  --common-accent: #f093fb;
+  --common-background: #f8f9fa;
+  --common-card-bg: #2a2a2a;
+  --common-text-primary: #ffffff;
+  --common-text-secondary: #b0b0b0;
+  --common-text-light: #d0d0d0;
+  --common-border: #e9ecef;
+  --common-dark: #2c3e50;
+  --common-light: #f8f9fa;
+}
+
+.page-container {
+    width: 100%;
+    background-color: var(--black-800);
+    border-radius: 20px;
+    padding: 0;
+    color: var(--white);
+}
+
+.page-header {
+  background: linear-gradient(135deg, var(--common-primary) 0%, var(--common-secondary) 100%);
+  color: var(--white);
+  padding: 2rem 0;
+  text-align: center;
+  border-radius: 18px 18px 0 0;
+  margin-bottom: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-style{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10rem;
+    height: 10rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translate(64px, -64px);
+    border-radius: 50%;
+}
+
+.page-header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.header-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin: 0;
+  font-weight: 300;
+}
+
+.page-content {
+  padding: 2rem 2rem;
+}
+
+.page-nav-links {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.page-nav-links .nav-link {
+  display: inline-block;
+  margin: 0 15px;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, var(--common-primary) 0%, var(--common-secondary) 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.page-nav-links .nav-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  text-decoration: none;
+  color: white;
+}
+
+.page-nav-links .nav-link i {
+  margin-right: 0.5rem;
+}
+
+/* Common card styles */
+.common-card {
+  background-color: var(--common-card-bg);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.common-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.common-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.common-meta-item {
+  background-color: var(--black-900);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--common-text-primary);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.common-meta-item i {
+  margin-right: 0.5rem;
+  color: var(--common-primary);
+}
+
+.common-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--common-primary);
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.common-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--common-text-primary);
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+.common-location {
+  color: var(--common-text-secondary);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.common-location i {
+  margin-right: 0.5rem;
+  color: var(--common-primary);
+}
+
+.common-description {
+  color: var(--common-text-light);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.common-tag {
+  background: linear-gradient(135deg, var(--common-primary) 0%, var(--common-secondary) 100%);
+  color: var(--white);
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.common-tag:hover {
+  transform: translateY(-2px);
+}
+
+.common-tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.common-section-header {
+  color: var(--common-text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.common-section-header i {
+  margin-right: 0.5rem;
+  color: var(--common-primary);
+}
+
+.common-card-header {
+  margin-bottom: 1.5rem;
+}
+
+.common-duration {
+  background: linear-gradient(135deg, var(--common-primary), var(--common-secondary));
+  color: var(--white);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.institution-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--common-text-primary);
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    margin-top: 20px;
+    border-radius: 15px;
+  }
+  
+  .page-header {
+    padding: 2rem 0;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .header-subtitle {
+    font-size: 1rem;
+  }
+  
+  .page-content {
+    padding: 2rem 0;
+  }
+  
+  .common-card {
+    padding: 1.5rem;
+  }
+  
+  .common-title {
+    font-size: 1.3rem;
+  }
+  
+  .institution-name {
+    font-size: 1.1rem;
+  }
+  
+  .common-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .page-nav-links .nav-link {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .common-card {
+    padding: 1rem;
+  }
+  
+  .common-title {
+    font-size: 1.2rem;
+  }
+  
+  .institution-name {
+    font-size: 1rem;
+  }
+  
+  .common-tag {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+}

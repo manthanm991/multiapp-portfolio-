@@ -1,0 +1,115 @@
+@import url('../global.css');
+
+.hero-section {
+  background-color: var(--black-800);
+  border-radius: 14px;
+  margin: 0rem 1rem 2rem 1rem;
+  padding: 3rem 2rem;
+  color: var(--card-bg);
+}
+
+.home-cards-section {
+  border-radius: 14px;
+  margin-top: 2rem;
+}
+
+.highlight {
+  color: var(--primary-color);
+}
+
+.hero-content {
+  padding: 2rem 0;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 18rem;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.view-work-btn, .download-cv {
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.view-work-btn {
+  background-color: var(--primary-color);
+  color: var(--primary-text);
+  border: 2px solid var(--primary-color);
+}
+
+.view-work-btn:hover {
+  background-color: transparent;
+  color: var(--primary-color);
+  transform: translateY(var(--btn-hover-translate));
+}
+
+.download-cv {
+  background-color: transparent;
+  color: var(--outline-text);
+  border: 2px solid var(--outline-text);
+}
+
+.download-cv:hover {
+  background-color: var(--outline-bg-hover);
+  color: var(--primary-text);
+  transform: translateY(var(--btn-hover-translate));
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    margin: 0;
+    padding: 2rem 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .view-work-btn, .download-cv {
+    width: 100%;
+    text-align: center;
+  }
+}

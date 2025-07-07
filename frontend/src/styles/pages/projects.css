@@ -1,0 +1,99 @@
+@import url("../global.css");
+
+/* Projects Page */
+.projects-nav {
+  background-color: var(--black-900);
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  color: var(--white);
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.projects-nav .nav-link {
+  color: var(--white) !important;
+}
+.projects-nav .nav-link:hover {
+  color: var(--primary-bg-active) !important;
+}
+.projects-nav .nav-link.active {
+  color: var(--lime-shade) !important;
+}
+
+.project-prev-nav-btn, .project-next-nav-btn{
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: var(--primary-bg-active);
+}
+
+.details-container{
+    background: var(--black-100);
+}
+
+.custom-pagination .page-link {
+  color: var(--black-800);
+  border: 1px solid var(--text-muted);
+  border-radius: 8px !important;
+  margin: 0 12px;
+  padding: 8px 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.custom-pagination .page-link:hover {
+  background-color: var(--lime-shade);
+  color: var(--white);
+  border-color: var(--lime-shade);
+  transform: translateY(-1px);
+}
+
+.custom-pagination .page-item.active .page-link {
+  background-color: var(--primary-bg-active);
+  color: var(--white);
+  border-color: var(--primary-bg-active);
+}
+
+.custom-pagination .page-item.disabled .page-link {
+  cursor: not-allowed;
+  opacity: 0.5;
+  background-color: var(--white);
+}
+
+
+/* Project Details Page */
+.project-details {
+  background: var(--black-500);
+  padding: 1rem;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+}
+
+.hover-shadow {
+    transition: all 0.3s ease;
+}
+
+.hover-shadow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5rem 1rem rgb(179, 179, 179) !important;
+}
+
+.nav-tabs{
+    border-radius: 14px;
+    background: var(--black-800);
+}
+
+.nav-tabs .nav-link {
+  border: none;
+}
+
+.nav-tabs .nav-link.active {
+  background-color: transparent;
+  border-bottom: 2px solid #0d6efd;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e3f2fd;
+  color: rgb(255, 255, 255);
+}

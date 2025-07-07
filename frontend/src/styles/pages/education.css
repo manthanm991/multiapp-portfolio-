@@ -1,0 +1,169 @@
+@import url('../global.css');
+@import url('./common.css');
+
+.education-timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.education-item {
+  position: relative;
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: flex-start;
+}
+
+.education-item:last-child {
+  margin-bottom: 2rem;
+}
+
+.education-item:last-child .timeline-line {
+  display: none;
+}
+
+.timeline-marker {
+  position: relative;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  z-index: 2;
+  left: 1rem;
+}
+
+.timeline-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--common-primary) 0%, var(--common-secondary) 100%);
+  border: 4px solid var(--black-800);
+  box-shadow: 0 0 0 4px var(--common-primary);
+  position: relative;
+  z-index: 3;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100px;
+  background: linear-gradient(180deg, var(--common-primary) 0%, var(--common-secondary) 100%);
+  z-index: 1;
+}
+
+.education-content-wrapper {
+  flex: 1;
+}
+
+.education-card-header {
+  margin-bottom: 1.5rem;
+}
+
+
+.education-description {
+  color: var(--common-text-light);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.period, .cgpa {
+  background-color: var(--black-900);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: var(--common-text-primary);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+}
+
+.period i, .cgpa i {
+  margin-right: 0.5rem;
+  color: var(--common-primary);
+}
+
+/* Education-specific course styles */
+.key-courses h5 {
+  color: var(--common-text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.courses-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.course-tag {
+  background: linear-gradient(135deg, var(--common-primary) 0%, var(--common-secondary) 100%);
+  color: var(--white);
+  padding: 0.4rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: transform 0.2s ease;
+}
+
+.course-tag:hover {
+  transform: translateY(-2px);
+}
+
+/* Education-specific flip card styles */
+.flip-card-container {
+  padding-left: 1rem;
+}
+
+.education-flip-card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Education-specific responsive styles */
+@media (max-width: 1199px) {
+  .flip-card-container {
+    padding-left: 0.5rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .education-item {
+    flex-direction: column;
+  }
+  
+  .timeline-marker {
+    margin-right: 0;
+    margin-bottom: 1rem;
+    align-self: flex-start;
+  }
+  
+  .timeline-line {
+    display: none;
+  }
+  
+  .flip-card-container {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .education-timeline {
+    padding: 1rem 0;
+  }
+  
+  .education-item {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .courses-list {
+    justify-content: center;
+  }
+  
+  .course-tag {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
