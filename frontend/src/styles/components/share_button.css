@@ -1,0 +1,117 @@
+@import url('../global.css');
+
+:root {
+  --share-bg: var(--white);
+  --share-icon-color: var(--black);
+  --share-link-bg: rgba(255, 255, 255, 0.95);
+  --share-shadow-color: rgba(240, 239, 241, 0.5);
+  --share-hover-shadow: var(--primary-bg-active);
+}
+
+.share-container {
+  position: relative;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.share-toggle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.share-toggle::before {
+  content: "\f1e0";
+  position: absolute;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 700;
+  font-size: 1.5rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--share-bg);
+  color: var(--share-icon-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-toggle:checked::before {
+  content: "\f00d";
+  font-size: 1.2rem;
+}
+
+.share-toggle::after {
+  content: "";
+  position: absolute;
+  top: -35%;
+  left: -35%;
+  width: 120%;
+  height: 120%;
+  z-index: -10;
+  border: 10px solid var(--share-bg);
+  box-shadow: 0 0 30px var(--share-shadow-color);
+  border-radius: 0%;
+  transform: scale(0.4);
+  transition: all 0.4s ease;
+}
+
+.share-toggle:checked::after {
+  transform: scale(1.5);
+  border-radius: 50%;
+}
+
+.share-links {
+  position: absolute;
+  z-index: 10;
+}
+
+.share-link {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: none;
+  outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--share-link-bg);
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--white);
+  transition: all 0.4s ease;
+  backdrop-filter: blur(5px);
+}
+
+.share-link:hover {
+  scale: 1.1;
+  box-shadow: 0px 0px 20px 5px var(--share-hover-shadow);
+  cursor: pointer;
+}
+
+.share-link:active {
+  scale: 0.95;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .share-container {
+    min-width: 35px;
+    min-height: 35px;
+  }
+
+  .share-toggle {
+    width: 35px;
+    height: 35px;
+  }
+
+  .share-link {
+    width: 35px;
+    height: 35px;
+  }
+}

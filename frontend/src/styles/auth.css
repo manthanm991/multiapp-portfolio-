@@ -1,7 +1,7 @@
 @import url('./global.css');
 
-.login-container, .forgot-password-container, .create-account-container, .reset-container, .unauthorized-container {
-    background-color: var(--bg-white);
+.login-container, .forgot-password-container, .create-account-container, .reset-container, .unauthorized-container, .not-found-container {
+    background-color: var(--bg-light);
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -10,9 +10,7 @@
     width: 100%;
     text-align: center;
 }
-.create-account-container{
-    margin-top: 50px;
-}
+
 .logo-container {
     display: flex;
     justify-content: center;

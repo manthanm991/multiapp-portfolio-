@@ -1,35 +1,37 @@
 :root {
+  --primary-color: #ffd700;
   --primary-bg: #343a40;
   --primary-bg-hover: #495057;
   --primary-bg-active: #007bff;
   --primary-accent: #17a2b8;
-  
+  --primary-text: #333;
+
   --text-primary: #ffffff;
   --text-secondary: #adb5bd;
   --text-dark: #343a40;
   --text-muted: #6c757d;
-  
+
   --bg-light: #f8f9fa;
   --bg-white: #ffffff;
   --bg-overlay: rgba(0, 0, 0, 0.5);
-  
+
   --border-color: #495057;
   --border-light: #dee2e6;
-  
+
   --btn-danger: #dc3545;
   --btn-danger-hover: #c82333;
   --btn-primary: #007bff;
   --btn-primary-hover: #0056b3;
   --btn-success: #28a745;
-  
+
   --shadow-light: rgba(0, 0, 0, 0.1);
   --shadow-medium: rgba(0, 0, 0, 0.15);
   --shadow-dark: rgba(0, 0, 0, 0.2);
-  
+
   --scrollbar-track: #343a40;
   --scrollbar-thumb: #495057;
   --scrollbar-thumb-hover: #6c757d;
-  
+
   --toggle-bg: #343a40;
   --toggle-bg-hover: #495057;
   --toggle-bg-active: #007bff;
@@ -39,5 +41,83 @@
   --sidebar-bg-open: #1a1d23;
   --sidebar-bg-open-gradient: linear-gradient(135deg, #292c2f 0%, #3b4045 100%);
 
-  --google-btn-bg-color: #4285F4;
+  --google-btn-bg-color: #4285f4;
+  --outline-text: #ffffff;
+  --outline-bg-hover: #ffffff;
+  --btn-hover-translate: -2px;
+
+  --gray-100: #f3f4f6;
+  --gray-200: #e5e7eb;
+  --gray-300: #d1d5db;
+  --gray-400: #9ca3af;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  --yellow-400: #facc15;
+  --green-500: #22c55e;
+  --blue-500: #3b82f6;
+  --white: #ffffff;
+  --black: #000000;
+
+  --lime-100: #ecfccb;
+  --lime-200: #d9f99d;
+  --lime-300: #bef264;
+  --lime-400: #a3e635;
+  --lime-500: #84cc16;
+  --lime-600: #65a30d;
+  --lime-700: #4d7c0f;
+  --lime-800: #3f6212;
+  --lime-900: #365314;
+  --lime-shade: #caff33;
+
+  --black-100: #f2f2f2;
+  --black-200: #e6e6e6;
+  --black-300: #cccccc;
+  --black-400: #b3b3b3;
+  --black-500: #999999;
+  --black-600: #808080;
+  --black-700: #666666;
+  --black-800: #4d4d4d;
+  --black-900: #333333;
+
+  --dark-gray: #434343;
+  --deep-gray: #282828;
+  --charcoal-gray: #292929;
+  --slate-gray: #414141;
+
+  --pulse-blue-color: #3498db;
+  --pulse-red-color: #e74c3c;
+  --pulse-orange-color: #f39c12;
+  --pulse-green-color: #27ae60;
+  --pulse-purple-color: #9b59b6;
+
+  --common-primary: #667eea;
+  --common-secondary: #764ba2;
+  --common-accent: #f093fb;
+  --common-background: #f8f9fa;
+  --common-card-bg: #2a2a2a;
+  --common-text-primary: #ffffff;
+  --common-text-secondary: #b0b0b0;
+  --common-text-light: #d0d0d0;
+  --common-border: #e9ecef;
+  --common-dark: #2c3e50;
+  --common-light: #f8f9fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--black-700);
 }
