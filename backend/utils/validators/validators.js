@@ -86,32 +86,6 @@ const newsQuery = () => [
     .toInt()
 ];
 
-const contactForm = () => [
-  body('name')
-    .trim()
-    .isLength({ min: 2, max: 100 })
-    .withMessage('Name must be between 2 and 100 characters')
-    .escape(),
-
-  body('email')
-    .trim()
-    .isEmail()
-    .withMessage('Please provide a valid email address')
-    .normalizeEmail(),
-
-  body('subject')
-    .trim()
-    .isLength({ min: 5, max: 200 })
-    .withMessage('Subject must be between 5 and 200 characters')
-    .escape(),
-
-  body('message')
-    .trim()
-    .isLength({ min: 10, max: 1000 })
-    .withMessage('Message must be between 10 and 1000 characters')
-    .escape()
-];
-
 const fileUpload = () => [
   body('fileName')
     .optional()
@@ -144,7 +118,6 @@ module.exports = {
   paginationQuery,
   searchQuery,
   newsQuery,
-  contactForm,
   fileUpload,
   sanitizeHtml,
   customValidation

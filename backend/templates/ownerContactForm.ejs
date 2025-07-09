@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>New Contact Form Message</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; color: #333; }
+    .container { max-width: 600px; background: #f0f0f0; padding: 20px; border-radius: 8px; }
+    .header { font-size: 18px; color: #007bff; margin-bottom: 10px; }
+    .label { font-weight: bold; }
+    .value { margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">📩 New Contact Form Submission</div>
+
+    <p><span class="label">Name:</span> <%= data.firstName %> <%= data.lastName %></p>
+    <p><span class="label">Email:</span> <%= data.email %></p>
+    <p><span class="label">Phone:</span> <%= data.phone %></p>
+    <p><span class="label">Message:</span><br><%= data.message %></p>
+
+    <hr>
+    <small>This message was sent via your portfolio's contact form.</small>
+  </div>
+</body>
+</html>
