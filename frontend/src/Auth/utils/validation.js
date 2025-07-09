@@ -10,6 +10,10 @@ export const doPasswordsMatch = (password, confirmPassword) => { return password
 
 export const isValidName = (name) => { return name && name.trim().length >= VALIDATION_RULES.MIN_NAME_LENGTH; };
 
+export const isValidPhone = (phone) => {
+  return VALIDATION_RULES.PHONE_REGEX.test(phone);
+};
+
 export const validateLoginForm = (credentials) => {
   const errors = [];
 

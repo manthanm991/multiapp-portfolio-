@@ -1,15 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import { AuthProvider, Login, Signup, ForgotPassword, Unauthorized, ResetPassword, PrivateRoute, PublicRoute, AdminRoute, ROUTES, TOAST_CONFIG } from './Auth';
 import Layout, { AuthLayout } from './components/Layout';
-import "react-toastify/dist/ReactToastify.css";
-import Home from './pages/Home';
-import Education from './components/portfolio/Education';
-import Experience from './components/portfolio/Experience';
-import About from './components/portfolio/About';
-import Contact from './components/portfolio/Contact';
-import Projects from './components/portfolio/Projects';
+import { About, Contact, Education, Experience, Projects, Home } from './Portfolio';
 import NotFound from './components/common/NotFound';
 import "./App.css";
 
