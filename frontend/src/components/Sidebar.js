@@ -44,18 +44,15 @@ export default function Sidebar() {
 
             {isSidebarOpen && (<div className="sidebar-overlay d-lg-none" onClick={closeSidebar}></div>)}
 
-            <nav
-                className={`sidebar ${isSidebarOpen ? "sidebar-open" : ""} ${sidebarExpanded ? "sidebar-expanded" : "sidebar-collapsed"}`}
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
-            >
+            <nav className={`sidebar ${isSidebarOpen ? "sidebar-open" : ""} ${sidebarExpanded ? "sidebar-expanded" : "sidebar-collapsed"}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} >
                 <div className="sidebar-header">
                     <button className={`sidebar-menu-toggle ${isSidebarOpen ? "active" : ""}`} onClick={toggleSidebar} aria-label="Toggle sidebar">
                         <span className="toggle-icon">&#9776;</span>
                     </button>
 
                     <Link to="/" className="sidebar-brand" onClick={closeSidebar}>
-                        <i className="fas fa-user-circle logo-icon"></i>
+                        <img src={process.env.REACT_APP_LOGO_64} alt="Logo" className="logo-icon" width={32}
+                            height={32} />
                         <span className="brand-text">Manthan Makode</span>
                     </Link>
 
@@ -70,12 +67,7 @@ export default function Sidebar() {
 
                             return (
                                 <li className="nav-item" key={path}>
-                                    <Link
-                                        className={`nav-link ${isActiveRoute(path) ? "active" : ""}`}
-                                        to={path}
-                                        onClick={closeSidebar}
-                                        title={label}
-                                    >
+                                    <Link className={`nav-link ${isActiveRoute(path) ? "active" : ""}`} to={path} onClick={closeSidebar} title={label} >
                                         <i className={`${icon} nav-icon`}></i>
                                         <span className="nav-text">{label}</span>
                                     </Link>
